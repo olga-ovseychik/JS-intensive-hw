@@ -1,0 +1,1 @@
+console.log(`F${({}.prop+'').slice(5, 7)}land`);
