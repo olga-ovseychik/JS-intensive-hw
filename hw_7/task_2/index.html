@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw-7-2</title>
+    <style>
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 100dvh;
+            font-family: sans-serif;
+        }
+        h2 {
+            text-align: center;
+        }
+        .timer, .stopwatch {
+            width: 100%;
+            padding: 50px;
+            height: 50%;
+            border-radius: 15px;
+            border: 1px solid #3b82f6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .time {
+            width: 30%;
+            border-bottom: solid 1px #bfdbfe;
+            color: #000;
+            padding: 5px;
+            text-align: center;
+            font-size: large;
+        }
+        #stopwatch_controlBtns, #timer_controlBtns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        #timer_controlBtns {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn {
+            background-color: #3b82f6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            color: #eff6ff;
+            cursor: pointer;
+        }
+        .addBtn {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="stopwatch">
+            <h2>Stopwatch</h2>
+            <div id="stopwatch" class="time">
+                <span id="stopwatch_hour">00</span> :
+                <span id="stopwatch_minute">00</span> :
+                <span id="stopwatch_second">00</span>
+            </div>
+            <div id="stopwatch_controlBtns">
+                <button data-action="start" class="btn" id="stopwatch_startBtn">Start</button>
+                <button data-action="pause" class="btn">Pause</button>
+                <button data-action="reset" class="btn">Reset</button>
+            </div>
+        </div>
+        <div class="timer">
+            <h2>Timer</h2>
+            <div id="timer" class="time">
+                <span id="timer_hour">00</span> :
+                <span id="timer_minute">01</span> :
+                <span id="timer_second">30</span>
+            </div>
+            <div id="timer_controlBtns">
+                <div>
+                    <button data-action="start" class="btn" id="timer_startBtn">Start</button>
+                    <button data-action="pause" class="btn">Pause</button>
+                    <button data-action="reset" class="btn">Reset</button>
+                    <button data-action="addOne" class="btn addBtn">+1.00</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
